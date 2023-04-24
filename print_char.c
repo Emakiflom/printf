@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 /**
- * print_char - writes the character c 
+ * print_char - writes the character c
  * @c: Character to print
  * Return: 1.
  */
