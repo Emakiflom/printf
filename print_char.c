@@ -3,11 +3,10 @@
 #include <stdio.h>
 
 /**
- * print_char - writes the character c
+ * print_char - writes the character c 
  * @c: Character to print
  * Return: 1.
  */
-
 int print_char(va_list c)
 {
 	unsigned char a_char;
@@ -16,11 +15,11 @@ int print_char(va_list c)
 	_putchar(a_char);
 	return (1);
 }
-
 /**
  * print_porcentage - % persentage printer
  * Return: 1.
  */
+
 int print_porcentage(void)
 {
 	_putchar('%');
