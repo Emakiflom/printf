@@ -66,15 +66,10 @@ int _printf(const char *format, ...)
 	va_list af;
 	int (*f)(va_list);
 	unsigned int i = 0, cpint = 0;
-	const char *p;
-
-	p = format;
 
 	if (format == NULL)
 		return (-1);
 	va_start(af, format);
-	flags_t flags = {0, 0, 0};
-
 	while (format[i])
 	{
 		while (format[i] != '%' && format[i])
@@ -92,12 +87,6 @@ int _printf(const char *format, ...)
 			i += 2;
 			continue;
 		}
-		while (get_flag(*p, &flags))
-				p++;
-			pfunc = get_print(*p);
-			count += (pfunc)
-				? pfunc(arguments, &flags)
-				: _printf("%%%c", *p);
 		if (!format[i + 1])
 			return (-1);
 		_putchar(format[i]);
