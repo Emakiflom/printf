@@ -1,11 +1,13 @@
 #include <stdarg.h>
 #include <unistd.h>
 #include "main.h"
+
 /**
   * find_function - function that finds formats for _printf
   * @format: format (char, string, int, decimal)
   * Return: NULL or function associated ;
   */
+
 int (*find_function(const char *format))(va_list)
 {
 	unsigned int j = 0;
