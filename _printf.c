@@ -1,19 +1,26 @@
 #include <stdarg.h>
 #include <unistd.h>
 #include "main.h"
-
 /**
   * find_function - function that finds formats for _printf
   * @format: format (char, string, int, decimal)
   * Return: NULL or function associated ;
   */
-
 int (*find_function(const char *format))(va_list)
 {
 	unsigned int j = 0;
 	List_f find_f[] = {
 		{"c", print_char},
 		{"s", print_string},
+		{"i", print_int},
+		{"d", print_dec},
+		{"r", print_rev},
+		{"b", print_bin},
+		{"u", print_unsig},
+		{"o", print_octal},
+		{"x", print_x},
+		{"X", print_X},
+		{"R", print_rot13},
 		{NULL, NULL}
 	};
 
@@ -24,35 +31,6 @@ int (*find_function(const char *format))(va_list)
 		j++;
 	}
 	return (NULL);
-}
-
-/**
- * get_flag - turns on flags if _printf finds
- * @s: character that holds the flag specifier
- * @f: pointer to the struct flags in which we turn the flags on
- * Return: 1 if a flag has been turned on, 0 otherwise
- */
-
-int get_flag(char s, flags_t *f)
-{
-	int i = 0;
-
-	switch (s)
-	{
-		case '+':
-			f->plus = 1;
-			i = 1;
-			break;
-		case ' ':
-			f->space = 1;
-			i = 1;
-			break;
-		case '#':
-			f->hash = 1;
-			i = 1;
-			break;
-	}
-	return (i);
 }
 
 /**
