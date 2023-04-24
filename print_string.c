@@ -8,7 +8,7 @@
  * Return: 1.
  */
 
-int print_string(va_list s, flags_t *f)
+int print_string(va_list s)
 {
 	char *a_string;
 	int  j = 0;
