@@ -12,7 +12,7 @@ int print_int(va_list i);
 int print_dec(va_list d);
 
 /**
-  * struct code_format - Struct format
+  * struct List_format - Struct format
   * @sc: The specifiers
   * @f: The function associated
   */
