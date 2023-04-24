@@ -29,6 +29,7 @@ int print_dec(va_list d)
 		power_ten = 1;
 		for (j = 1; j <= length - 1; j++)
 			power_ten *= 10;
+			
 		for (j = 1; j <= length; j++)
 		{
 			digit = n / power_ten;
