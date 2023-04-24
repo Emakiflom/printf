@@ -17,3 +17,4 @@ int print_str(char *format, va_list pa)
 		string = "(null)";
 	conta_dor = _puts(string);
 	return (conta_dor);
+}
