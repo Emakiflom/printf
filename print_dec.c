@@ -6,7 +6,7 @@
 * Return: size in text.
 */
 
-int print_dec(va_list d, flags_t *f)
+int print_dec(va_list d)
 {
 	int length, power_ten, j, digit, n;
 	int counter = 0, num;
