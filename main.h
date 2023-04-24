@@ -32,5 +32,7 @@ int print_hex(char *format, va_list);
 int print_HEX(char *format, va_list);
 int print_octa(char *format, va_list);
 int print_unsign(char *format, va_list);
+int print_rev(va_list r);
+int print_rot(va_list R);
 
 #endif
