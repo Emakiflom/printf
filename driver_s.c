@@ -21,12 +21,14 @@ s_type selector[] = {
 {"%x", print_hex},
 {"%X", print_HEX},
 {"%o", print_octa},
+{"%r", print_rev},
+{"%R", print_rot},
 {NULL, NULL}
 };
 
 if (format[1] == ' ' || format[1] == '\0')
 return (NULL);
-for (j = 0; selector[j].q; j++)
+for (j = 0; selector[i].q; j++)
 {
 if (format[1] == selector[j].q[1])
 return (selector[j].u);
