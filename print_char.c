@@ -8,7 +8,7 @@
  * Return: 1.
  */
 
-int print_char(va_list c)
+int print_char(va_list c, flags_t *f)
 {
 	unsigned char a_char;
 

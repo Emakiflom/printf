@@ -30,10 +30,10 @@ typedef struct printHandler
 
 int _putchar(char c);
 int _printf(const char *format, ...);
-int print_char(va_list c);
-int print_string(va_list s);
-int print_int(va_list i);
-int print_dec(va_list d);
+int print_char(va_list c, flags_t *f);
+int print_string(va_list s, flags_t *f);
+int print_int(va_list i, flags_t *f);
+int print_dec(va_list d, flags_t *f);
 
 /**
   * struct code_format - Struct format
